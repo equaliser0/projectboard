@@ -2,6 +2,8 @@
 
 [frac.tools](https://github.com/fractools) Projectboard with State and Milestones.
 
+> This is under development
+
 ## Project setup
 ```
 npm install

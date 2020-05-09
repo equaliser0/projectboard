@@ -1,5 +1,5 @@
 export default {
-  series: [33],
+  series: [10],
   chartOptions: {
     labels: ['Projectboard'],
     chart: {

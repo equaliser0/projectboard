@@ -1,5 +1,5 @@
-<template>
-  <div id="app" class="bg-gray-800 h-screen text-white">
+<template class="bg-gray-800">
+  <div id="app" class="bg-gray-800 h-full text-white">
     <div class="">
       <t-alert
         base-class="border px-4 py-3 rounded absolut"
@@ -9,6 +9,7 @@
         <p>This App is under developement!</p>
       </t-alert>
       <Header class="w-full shadow-md"/>
+      <Project class="w-full"/>
       <Milestones class="w-full"/>
       <Technologies class="w-full"/>
     </div>
@@ -17,6 +18,7 @@
 
 <script>
 import Header from './components/Header'
+import Project from './components/Project'
 import Milestones from './components/Milestones'
 import Technologies from './components/Technologies'
 
@@ -24,6 +26,7 @@ export default {
   name: 'App',
   components: {
     Header,
+    Project,
     Milestones,
     Technologies
   }

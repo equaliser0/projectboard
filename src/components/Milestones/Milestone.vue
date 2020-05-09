@@ -14,9 +14,6 @@
 import VueApexCharts from 'vue-apexcharts'
 
 export default {
-  mounted() {
-    console.log(VueApexCharts);
-  },
   name: 'Milestone',
   props: {
     series: Array,
