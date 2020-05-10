@@ -14,16 +14,23 @@ import marked from 'marked'
 
 // Global Prototypes
 Vue.prototype.$marked = (text) => {
+  const renderer = new marked.Renderer();
+
+  // INSERTS target="_blank" INTO HREF TAGS
+  renderer.link = (href, title, text) => {
+    return `<a target="_blank" href="${href}">${text}` + '</a>';
+  }
+
   marked.setOptions({
-    renderer: new marked.Renderer(),
+    renderer: renderer,
     gfm: true,
     tables: true,
     breaks: true,
     pedantic: false,
-    sanitize: true,
     smartLists: true,
     smartypants: false
   });
+
 
   return marked(text);
 }
