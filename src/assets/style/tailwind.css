@@ -24,5 +24,9 @@ h5 {
   @apply text-lg font-medium;
 }
 
+a {
+  @apply text-green-300 font-bold italic;
+}
+
 @tailwind components;
 @tailwind utilities;

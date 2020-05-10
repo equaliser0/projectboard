@@ -626,6 +626,14 @@ h5 {
   font-weight: 500;
 }
 
+a {
+  --text-opacity: 1;
+  color: #9ae6b4;
+  color: rgba(154, 230, 180, var(--text-opacity));
+  font-weight: 700;
+  font-style: italic;
+}
+
 .container {
   width: 100%;
 }
