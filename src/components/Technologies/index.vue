@@ -25,9 +25,9 @@
     </div>
     <div
       class="bg-gray-700 rounded"
-      v-if="tech">
+      v-if="openedTech">
       <div class="p-6">
-        <div class="" v-html="renderMarkdown()">
+        <div class="" v-html="renderMarkdown(openedTech)">
         </div>
       </div>
     </div>
@@ -45,15 +45,39 @@ export default {
   name: 'Technologies',
   data() {
     return {
-      tech: null
+      openedTech: null,
+      techs: [
+        'Arkecosystem',
+        'NestJS',
+        'NuxtJS',
+        'SocketIO',
+        'TailwindCSS',
+        'VueJS'
+      ],
+      text: []
     }
+  },
+  async created() {
+    for (let tech of this.techs) {
+      fetch(`https://raw.githubusercontent.com/equaliser0/puplicdataset/master/AwesomeEcosystem/Technologies/${tech}.md`)
+        .then(response => response.text())
+        .then(result => this.text.push({
+          tech,
+          result
+        }));
+    }
+    console.log(this.text);
   },
   methods: {
     openTech(tech) {
-      this.tech === tech ? this.tech = null : this.tech = tech;
+      this.openedTech === tech ? this.openedTech = null : this.openedTech = tech;
     },
-    renderMarkdown() {
-      return this.$marked(`## Awesome ${this.tech}`)
+    renderMarkdown(tech) {
+      console.log(tech);
+      let res = this.text.find(t => t.tech === tech);
+      console.log(res.result);
+      let text2html = this.$marked(res.result);
+      return text2html;
     }
   },
   components: {
