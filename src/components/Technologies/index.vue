@@ -2,6 +2,7 @@
   <section class="container mx-auto p-6">
     <div class="">
       <h1>Awesome Technologies</h1>
+      <p>Click on a Technologie to see more information.</p>
     </div>
     <div class="flex justify-between py-4">
       <Ark
@@ -45,7 +46,7 @@ export default {
   name: 'Technologies',
   data() {
     return {
-      openedTech: null,
+      openedTech: false,
       techs: [
         'Arkecosystem',
         'NestJS',
@@ -66,16 +67,13 @@ export default {
           result
         }));
     }
-    console.log(this.text);
   },
   methods: {
     openTech(tech) {
-      this.openedTech === tech ? this.openedTech = null : this.openedTech = tech;
+      this.openedTech === tech ? this.openedTech = false : this.openedTech = tech;
     },
     renderMarkdown(tech) {
-      console.log(tech);
       let res = this.text.find(t => t.tech === tech);
-      console.log(res.result);
       let text2html = this.$marked(res.result);
       return text2html;
     }
