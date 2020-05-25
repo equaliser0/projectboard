@@ -1,5 +1,5 @@
 <template class="bg-gray-800">
-  <div id="app" class="bg-gray-800 h-full text-white">
+  <div id="app" class="scroller bg-gray-800 h-full text-white" style="scrollbar-color: #123456 #65431;">
     <div class="">
       <t-alert
         base-class="border px-4 py-3 rounded absolut"
