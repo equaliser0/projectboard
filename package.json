@@ -15,7 +15,7 @@
   "main": "index.vue",
   "dependencies": {
     "@arkecosystem/client": "^1.1.3",
-    "apexcharts": "^3.19.0",
+    "apexcharts": "^3.24.0",
     "core-js": "^3.6.4",
     "marked": "^1.0.0",
     "tailwindcss": "^1.4.5",
