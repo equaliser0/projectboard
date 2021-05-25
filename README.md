@@ -4,6 +4,8 @@
 
 > This is under development
 
+![screenshot](screenshot.png)
+
 ## Project setup
 ```
 npm install
