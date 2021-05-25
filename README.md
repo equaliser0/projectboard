@@ -1,6 +1,6 @@
 # Projectboard
 
-[frac.tools](https://github.com/fractools) Projectboard with State and Milestones.
+[ecosis](https://github.com/AwesomeEcosystem) Projectboard
 
 > This is under development
 
